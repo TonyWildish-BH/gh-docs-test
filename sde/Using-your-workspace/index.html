@@ -1,0 +1,812 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Azure TRE">
+      
+      
+        <meta name="author" content="Microsoft">
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/AzureTRE/sde/Using-your-workspace/">
+      
+      
+        <link rel="prev" href="../Home/">
+      
+      
+        <link rel="next" href="../Working-with-data/">
+      
+      
+      <link rel="icon" href="../../assets/ms_icon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Using your workspace - Azure TRE</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "7gescazz1m");
+</script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="16768511" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#using-your-workspace" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../..">
+    <strong>Click here to go to latest.</strong>
+  </a>
+</script>
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Azure TRE" class="md-header__button md-logo" aria-label="Azure TRE" data-md-component="logo">
+      
+  <img src="../../assets/ms_icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Azure TRE
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Using your workspace
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/AzureTre/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Azure TRE" class="md-nav__button md-logo" aria-label="Azure TRE" data-md-component="logo">
+      
+  <img src="../../assets/ms_icon.png" alt="logo">
+
+    </a>
+    Azure TRE
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/AzureTre/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portal/Home/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Data Portal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adc/Home/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Analytics Data Core
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    The Secure Data Environment
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            The Secure Data Environment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Home/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Using your workspace
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Using your workspace
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-access-to-the-sde" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting access to the SDE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-hierarchy-sde-workspace-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource hierarchy: SDE, Workspace, User
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-a-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing a workspace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-virtual-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Virtual Machine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-linux-vms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with Linux VMs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-details-about-workspaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      More details about workspaces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="More details about workspaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keeping-vms-up-to-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keeping VMs up to date
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considerations-for-workspace-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations for workspace managers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cost-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cost efficiency
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Working-with-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-access-to-the-sde" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting access to the SDE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-hierarchy-sde-workspace-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource hierarchy: SDE, Workspace, User
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-a-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing a workspace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-virtual-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Virtual Machine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-linux-vms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with Linux VMs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-details-about-workspaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      More details about workspaces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="More details about workspaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keeping-vms-up-to-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keeping VMs up to date
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considerations-for-workspace-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerations for workspace managers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cost-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cost efficiency
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="using-your-workspace">Using your workspace</h1>
+<p>You access your workspace via the web, once you've been assigned an appropriate role. A workspace consists of several <strong>workspace services</strong>, plus also access to <strong>shared services</strong>, which are shared by all the workspaces in the SDE. The <strong>Workspace Owner</strong> can manage all the resources in their own workspaces, regardless of who created them, but cannot manipulate the shared services. A <strong>Workspace Researcher</strong> can also create and use certain resources, but can only delete or modify resources they have created themselves.</p>
+<h2 id="getting-access-to-the-sde">Getting access to the SDE</h2>
+<p>As of December 2024, the MVP release of the SDE is now available, and will be the default mode of providing data and compute resources to projects approved through the DAC. If you have been given access to it, you can log in at https://sde.bartshealth.nhs.uk/, using your credentials. These credentials will either be:</p>
+<ul>
+<li>Your usual Barts Health credentials that you would use to log into your laptop or VDI. Generally your desktop login @ bartshealthnhs.uk (e.g.,  SmithJ@bartshealthnhs.uk)</li>
+<li>Dedicated credentials to access Precision Medicine related services (e.g., SmithJ@BHPrecisionMedicine.onmicrosoft.com). These will be provided if you do not have an NHS account that can be mapped into our Entra ID directory.</li>
+</ul>
+<p><strong>TBD</strong> <a href="mailto:bartshealth.researchdatasupport@nhs.net">contact us</a> if you think you should be among them.</p>
+<h2 id="resource-hierarchy-sde-workspace-user">Resource hierarchy: SDE, Workspace, User</h2>
+<p>Within the SDE, resources for a project are grouped into a Workspace, which has workspace-level resources. These workspace-level resources may also have user-level resources. The terms <strong>project</strong> and <strong>workspace</strong> both refer to the same thing as far as the SDE is concerned. From within a workspace, you will not have access to any other workspaces or their resources - this is a key feature of the SDE architecture. If you have multiple workspaces available to you, by way of being on multiple projects at the same time, the only way to share data between them will be to export it from one workspace and import it to the other.</p>
+<p><strong>TBD</strong> links
+Some examples of workspace services:</p>
+<ul>
+<li><strong>Gitea</strong> is a git repository management system. This should be installed once in each workspace to allow all Users in that workspace to use Git to share and manage your code within that workspace. Changes you make in these git repositories will need to be exported through the Airlock to be used elsewere.</li>
+<li><strong>Apache Guacamole</strong> is a virtual desktop management system. This allows you to create virtual machines (Linux or Windows), and then get a virtual desktop to access them. Guacamole itself is a project-level resource, so you only need one per workspace, but the VMs created in it are specific to the user, so they are a user-level resource, not shared among multiple users.</li>
+<li><strong>MySQL</strong> is a standard SQL database service, which, again, probably only needs one deployment per workspace. Each MySQL service can hold multiple databases, each with their own permissions.</li>
+<li><strong>Azure Databricks</strong>, <strong>AzureML</strong>, and <strong>MLflow</strong> are available for machine-learning projects.</li>
+</ul>
+<p>At the SDE level, the most important shared services are:</p>
+<ul>
+<li><strong>Gitea</strong>. This shared service is useful for mirroring external Git repositories into the SDE network space so you can access them from within a workspace. Without this, you have no external access to, for example, GitHub. The access is one way, you cannot use this service to push changes back to GitHub. Access to this service can be provided by raising a <a href="https://github.com/Barts-Life-Science/Support">support issue</a> and identifying the GitHub repositories that need to be mirrored.</li>
+<li><strong>Nexus</strong>. This is a <a href="https://help.sonatype.com/en/sonatype-nexus-repository.html">package mirroring repository from Sonatype</a>, which allows you to download packages from <a href="https://cran.r-project.org/">CRAN</a>, <a href="https://pypi.org/">PyPi</a>, Ubuntu mirrors, and other sources. If you wish to access a package repository that is not currently mirrored then please raise a <a href="https://github.com/Barts-Life-Science/Support">support issue</a>.</li>
+</ul>
+<p><strong>TBD</strong> Document how to use these.
+There are other services available, and new services can be created by building templates for them. If you have a need for a service that's not currently represented, <a href="mailto:bartshealth.researchdatasupport@nhs.net">contact us</a>.</p>
+<h2 id="accessing-a-workspace">Accessing a workspace</h2>
+<p>When you log into the SDE, your initial view will look something like this. There will be a separate workspace for each project you have access to, in this example, there's only one project.
+<img alt="Empty workspace" src="../../assets/sde/00-empty-workspace.png" />
+<strong>TBD</strong></p>
+<p>Click on the workspace to get the <strong>Workspace Overview</strong> page. There are other tabs there you can explore, to get more information about your workspace. They're not normally useful during operation, but if you file a bug report or an issue, a screenshot from the <strong>Operations</strong> tab is often helpful.
+<img alt="Workspace overview" src="01-workspace-overview" />
+<strong>TBD</strong></p>
+<p>The workspace currently has no services in it. Workspace Owners can use the <strong>Create new</strong> button on the right to bring up a menu of resources to choose from, then you fill in the form with a few parameters, and submit the form. Your workspace resources will then appear here, as you can see in the next screenshot. Here, we see a <strong>Gitea</strong> service, which is still deploying, and a <strong>Guacamole</strong> service, which is ready for use.</p>
+<p><strong>TBD</strong>
+N.B. We don't show the full process for deploying <strong>Gitea</strong> or <strong>Guacamole</strong>, since we will do that for you as part of the setup of your workspace. In any case, the process is very similar to that for creating a virtual machine, which is explained in detail below.
+<img alt="Workspace with services" src="03-workspace-with-services" />
+<strong>TBD</strong></p>
+<h2 id="creating-a-virtual-machine">Creating a Virtual Machine</h2>
+<p>Virtual machines are created via the <strong>Guacamole</strong> workspace service. From your workspace overview, click on the Guacamole service tile, which takes you to the screen below. Any existing VMs that you have access to will also be listed here, there are none at the moment.
+<img alt="Virtual desktop service" src="04-Virtual-Desktop-service.png" /></p>
+<p>Click the <strong>Create new</strong> button, then select an operating system, Windows or Linux.
+<img width="1351" alt="05 Choose a VM type" src="https://github.com/Barts-Life-Science/AzureTRE/assets/153200306/0fa82277-bf0f-41ea-90f5-be7c73bc911b">
+<br/></p>
+<p>The next form is practically identical for Windows or Linux machines, only the dropdown options vary. Fill in the obligatory name and description, select an <strong>image</strong> (which specifies which types of software the machine will have, what version of the operating system it runs etc), and a <strong>size</strong>, which specifies the number of CPUs and amount of memory.</p>
+<p>You cannot, at this time, specify the size of the disk for the virtual machine. That may be added as a feature later on, <a href="mailto:bartshealth.researchdatasupport@nhs.net">let us know</a> if you need that capability.</p>
+<p>Similarly, the options for VM image and size are currently rather limited. We expect to add options in the future for VMs with GPUs etc, and we are aware of the need to customise images for different use-cases. Again, please <a href="mailto:bartshealth.researchdatasupport@nhs.net">contact us</a> to let us know your requirements.</p>
+<p>Leave the <strong>Shared storage</strong> button selected. This means your VM will have access to storage that exists at the workspace-level, so will persist if you delete your VM. If you only use the VM disk, you will lose everything on it when the VM is destroyed. There's more info on that in the [[Working with data]] page.
+<img width="648" alt="06 Fill in the parameters" src="https://github.com/Barts-Life-Science/AzureTRE/assets/153200306/4e91ad5f-b913-4c0e-b8b7-91d36732f29d">
+<br/></p>
+<p>Click the <strong>Submit</strong> button, and after a few seconds, you see something like the next screenshot. You can either click the <strong>Go to resource</strong> button, or just click directly on the VM tile in the <strong>Resources</strong> section, to follow the progress of the deployment.</p>
+<p>The deployment progresses through several stages:</p>
+<ul>
+<li><strong>pending</strong> means the deployment is queued, but hasn't yet started</li>
+<li><strong>deploying</strong> means the resource is being constructed</li>
+<li><strong>running</strong> means the deployment succeeded</li>
+</ul>
+<p>Other states exist, such as <strong>failed</strong>, or <strong>updating</strong>, we don't go into those here.
+<img width="1264" alt="07 VM is being created" src="https://github.com/Barts-Life-Science/AzureTRE/assets/153200306/3144bc17-4685-457b-a8c2-15e2b857a773">
+<br/></p>
+<p>The <strong>Operations</strong> tab shows you detail of the deployment steps. The overall progress of the deployment is visible in the top-right in this view. Other buttons are greyed out at this point, and will remain so until the deployment finishes. This typically takes 5-10 minutes, but can take longer sometimes.</p>
+<p><img width="1348" alt="08 Follow VM creation process" src="https://github.com/Barts-Life-Science/AzureTRE/assets/153200306/e683a916-2199-4e47-9f3f-f958afdc17ba">
+<br/></p>
+<p><img width="1352" alt="09 VM is there" src="https://github.com/Barts-Life-Science/AzureTRE/assets/153200306/a7879575-e084-4713-a585-4b4684f25327">
+<br/></p>
+<p>Now the VM is fully deployed, it's shown as <strong>running</strong> in the title, and the <strong>Update</strong>, <strong>Delete</strong> and <strong>Actions</strong> buttons are now active. In the <strong>Actions</strong> menu, there are three options:</p>
+<ul>
+<li><strong>Reset password</strong> - ignore this, you don't need a password to access the VM.</li>
+<li><strong>Start</strong> will start the VM if it has been stopped, and</li>
+<li><strong>Stop</strong> will stop a running VM.</li>
+</ul>
+<p>You will be charged for your VM all the time it is running. If you know you won't need it for a while (e.g. overnight, weekends, or holidays), it makes sense to <strong>Stop</strong> it when you don't need it, and <strong>Start</strong> it again to save your project budget. We envisage adding the ability to auto-shutdown machines which are idle for, say, an hour, but that isn't available yet.</p>
+<p><img width="740" alt="10 VM action buttons" src="https://github.com/Barts-Life-Science/AzureTRE/assets/153200306/31bb814e-4284-41f9-999a-be461162a807">
+<br/></p>
+<p>Once the VM is fully booted, the Guacamole page will look like this. The VM is shown, with a <strong>Connect</strong> button, which will launch a new browser window connected to your VM.</p>
+<p><img width="809" alt="11 Guacamole with booted VM" src="https://github.com/Barts-Life-Science/AzureTRE/assets/153200306/63f8c823-3d1b-4b52-828c-68b2ae22af02">
+<br/></p>
+<p>Clicking the <strong>Connect</strong> button takes you to your virtual desktop. In this case, it's Ubuntu. You can hover over the icons for help on each.</p>
+<p><img width="1357" alt="12 Linux Desktop" src="https://github.com/Barts-Life-Science/AzureTRE/assets/153200306/98889395-f338-44bc-bc1d-10ed44b75ca0">
+<br/></p>
+<p>Clicking the <strong>Terminal</strong> icon brings up a terminal window. When you're finished with your session, just close the browser tab. Reconnecting later will bring it back in the same state.</p>
+<p><img width="917" alt="13 Linux Desktop with terminal" src="https://github.com/Barts-Life-Science/AzureTRE/assets/153200306/e3a8d2c1-c29f-4ce4-b60d-dfdcc0e8ffd6">
+<br/></p>
+<h2 id="working-with-linux-vms">Working with Linux VMs</h2>
+<ul>
+<li>Your Linux VM has no direct connectivity to the internet. If you need to update a package, or install new software, you can access various mirrors courtesy of the Nexus shared service, but you won't be able to download software from arbitrary sites.</li>
+<li>VMs are not backed up. If you delete a VM, everything on the disk is destroyed, with no possibility of recovering it.</li>
+<li>On the other hand, stopping and restarting the VM from the <strong>Action</strong> menu does not wipe the contents of your home directory, so is a safe way of saving money when you don't need the VM for a while. <em>However</em>, the <strong>/tmp</strong> directory <em>is</em> wiped on reboots, so don't store anything there if you want to keep it.</li>
+<li>The home directory is mounted on the root filesystem, which is not large. If you fill the disk completely, your VM may stop responding, and you may lose access to it, possibly losing your work in the process. For this reason, it's better to work with the shared storage we will configure into your workspace.</li>
+</ul>
+<h2 id="more-details-about-workspaces">More details about workspaces</h2>
+<h3 id="keeping-vms-up-to-date">Keeping VMs up to date</h3>
+<p>you should make sure you update the OS and software on your VMs regularly. Even though they're contained within a firewall, it's good best practice to make sure you're not running old software. For this reason, we'll be updating the VM templates regularly, and you can take advantage of that by simply deleting your VM and creating a new one.</p>
+<p>This is the recommended best practice, and it requires that you think carefully about how you customise your machines. If you find that you need to put a lot of effort into customising an image, let us know, we may be able to do this for you, and automate the process.</p>
+<h2 id="considerations-for-workspace-managers">Considerations for workspace managers</h2>
+<h2 id="cost-efficiency">Cost efficiency</h2>
+<p>Workspace Admins are responsible for managing the cost of their workspaces. Once the MVP goes live, users will be expected to pay for their services, until then, the cost will be absorbed by the Precision Medicine team.</p>
+<p>You can see the cost of your resources on the tile for that resource.  Generally, the most expensive resources are high-level managed functions like AzureML, or some of the larger VM sizes - particularly those with GPUs. Note that the cost displayed on the UI is from the Azure billing API, and may not directly reflect the cost you will be charged, the exact costing model has not yet been worked out. There is overhead for the SDE platform which has to be taken into account, not just the resources deployed into the workspace.</p>
+<p>User resources (e.g. VMs), workspace resources, and workspaces themselves can all be 'disabled', to save costs. Services that are disabled are hibernated, to the extent possible for that service, to minimise expenditure. You will still be charged for any storage used by a service during hibernation, but not for compute etc. Storage is generally cheap, so its can be ignored for most purposes.</p>
+<p>Note that disabling a service does <em>not</em> disable services below them. E.g., disabling Guacamole, the virtual desktop service, does not cascade down to disabling the VMs that have been deployed by it, and disabling the workspace does not disable any of the services within it. If you want to disable everything, you have to start from the bottom up, disabling user resources, then workspace services, then the workspace itself.</p>
+<p>We recommend that you monitor costs of your services in the first days of accessing your workspace, and decide which services to disable/re-enable based on your budget and convenience.</p>
+<p>We will provide the means to automatically disable VMs after a certain amount of idle-time, though that's not yet available.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
