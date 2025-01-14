@@ -1,0 +1,56 @@
+---
+site_name: Azure TRE
+site_url: https://microsoft.github.io/AzureTRE
+site_description: Azure TRE
+site_author: Microsoft
+
+repo_url: https://github.com/microsoft/AzureTre/
+edit_uri: ""
+
+theme:
+  name: material
+  custom_dir: mkdocs-overrides
+  font:
+    text: Roboto
+    code: Roboto Mono
+  palette:
+    scheme: default
+    primary: 0xffddff # 39 92 178
+    accent: indigo
+  logo: assets/ms_icon.png
+  favicon: assets/ms_icon.png
+  features:
+    - navigation.instant
+    - navigation.indexes
+extra:
+  version:
+    provider: mike
+    default: latest
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - meta
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.pathconverter
+  - mdx_truly_sane_lists
+  - pymdownx.tabbed
+  - pymdownx.tasklist
+
+nav:
+  - The Data Portal: portal/Home.md
+  - The Analytics Data Core: adc/Home.md
+  - The Secure Data Environment:
+    - Introduction: sde/Home.md
+    - Using your workspace: sde/Using-your-workspace.md
+    - Working with data: sde/Working-with-data.md
+
+extra_css:
+  - stylesheets/extra.css
